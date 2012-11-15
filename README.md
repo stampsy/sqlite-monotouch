@@ -1,4 +1,8 @@
 
+# sqlite-monotouch
+
+This is a fork of [sqlite-net](https://github.com/praeclarum/sqlite-net/). The only difference is this fork doesn't include tests and Windows binaries and wraps the source into a MonoTouch library project.
+
 # sqlite-net
 
 sqlite-net is an open source, minimal library to allow .NET and Mono applications to store data in [http://www.sqlite.org SQLite 3 databases]. It is written in C# and is meant to be simply compiled in with your projects. It was first designed to work with [MonoTouch](http://xamarin.com) on the iPhone, but has grown up to work on all the platforms (Mono for Android, .NET, Silverlight, WP7, WinRT, Azure, etc.).
@@ -154,19 +158,3 @@ Another helpful method is `ExecuteScalarAsync`. This allows you to return a scal
 			Debug.WriteLine(string.Format("Found '{0}' stock items.", t.Result));
 		});
 
-
-## Special note on use within WinRT/Windows 8/Metro Style/whatevr
-
-sqlite-net is fully compliant with WinRT Metro-style apps and will pass Microsoft Store validation.
-
-Please note:
-
-* Database files will always be created in the path returned by `Windows.Storage.ApplicationData.Current.LocalFolder.Path`.
-
-* You will need a copy of sqlite3.dll that has been compiled against SQLite.org's WinRT branch. Although this isn't in mainstream
-support, it is expected to be. You can find more information on that and download a properly compiled sqlite3.dll from
-[https://github.com/mbrit/sqlite-metrostyle].
-
-* We supply a [WinRT/Windows 8 sqlite3.dll](https://github.com/praeclarum/sqlite-net/tree/master/lib/metro)
-
- 
