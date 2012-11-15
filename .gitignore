@@ -4,7 +4,5 @@
 *.user
 *.suo
 _Resharper*
-obj
-bin
 test-results
 TestResults
